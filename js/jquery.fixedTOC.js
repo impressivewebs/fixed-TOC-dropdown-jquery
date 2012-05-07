@@ -2,7 +2,7 @@
     $.fixedTOC = function (el, settings) {
 
         var base = this,
-            s = null;
+               s = null;
 
         base.$el = $(el);
         base.el = el;
@@ -161,18 +161,18 @@
     $.fixedTOC.defaultSettings = {
         // non-customizable settings
         tocHeight        : null,
-        tocSub            : $('.toc-sub'),
-        tocUpClass        : 'toc-up',
-        tocLink            : $('#toc-link'),
-        tocLinks        : '.toc-h1 ul a',
-        topLink            : $('#top-link'),
-        currHash        : null,
+        tocSub           : $('.toc-sub'),
+        tocUpClass       : 'toc-up',
+        tocLink          : $('#toc-link'),
+        tocLinks         : '.toc-h1 ul a',
+        topLink          : $('#top-link'),
+        currHash         : null,
         // customizable settings
-        scrollSpeed        : 1000,
+        scrollSpeed      : 1000,
         menuSpeed        : 300,
-        useSubMenus        : true,
+        useSubMenus      : true,
         resetSubMenus    : true,
-        topLinkWorks    : true
+        topLinkWorks     : true
     };
 
     $.fn.fixedTOC = function (settings) {
