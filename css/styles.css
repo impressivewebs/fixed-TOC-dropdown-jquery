@@ -47,8 +47,12 @@ a:hover, a:active, a:focus {
 	transition: all .7s ease;
 }
 
-.toc-holder li li a:link,.toc-holder li li a:visited {
+.toc-holder li li a:link, .toc-holder li li a:visited {
 	padding-left: 50px;
+}
+
+.toc-holder li li li a:link, .toc-holder li li li a:visited {
+	padding-left: 100px;
 }
 
 .toc-holder li a:hover {
@@ -117,7 +121,7 @@ a:hover, a:active, a:focus {
 }
 
 .closed {
-	display: none;
+	display: block;
 }
 
 h1 {

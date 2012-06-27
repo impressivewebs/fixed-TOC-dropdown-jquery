@@ -36,7 +36,7 @@
             doOpenMenu : function () {
 
                 s.tocLink.on(s.menuOpens, function () {
-
+				
                     if (base.$el.hasClass(s.tocUpClass)) {
 
                         s.tocLink.find('span').addClass('rotate');
@@ -117,7 +117,7 @@
                     }, s.menuSpeed, function () {
                         base.$el.addClass(s.tocUpClass);
                         if (s.resetSubMenus) {
-                            $('.toc-sub').slideUp(0);
+                            $('.toc-sub').slideUp(1).addClass('closed');
                         }
                     });
 
@@ -168,6 +168,7 @@
         topLink          : $('#top-link'),
         currHash         : null,
         // customizable settings
+		menuOpens		 : 'click',
         scrollSpeed      : 1000,
         menuSpeed        : 300,
         useSubMenus      : true,
