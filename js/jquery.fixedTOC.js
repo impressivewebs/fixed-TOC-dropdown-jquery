@@ -57,7 +57,7 @@
                             top: '-' + s.tocHeight + 'px'
                         }, s.menuSpeed, function () {
                             base.$el.addClass(s.tocUpClass);
-                            $('.toc-sub').slideUp(0);
+                            s.tocSub.slideUp(0);
                         });
 
                     }
@@ -69,17 +69,10 @@
 
             doOpenItem : function () {
 
-                $('.toc-h1>a').on('click', function () {
+                $('.toc-h1>a, .toc-sub a').on('click', function () {
 
-                    s.tocSub.each(function () {
-
-                        if (!$(this).hasClass('closed')) {
-                            $(this).stop().slideUp().addClass('closed');
-                        }
-
-                    });
-
-                    $(this).parent().find('.toc-sub').stop().slideToggle().removeClass('closed');
+                    $(this).parent().siblings('.toc-h1').find('.toc-sub').stop().slideUp().addClass('closed');
+                    $(this).next('.toc-sub').stop().slideToggle().toggleClass('closed');
 
                     return false;
 
@@ -168,7 +161,7 @@
         topLink          : $('#top-link'),
         currHash         : null,
         // customizable settings
-        menuOpens        : 'click',
+		menuOpens		 : 'click',
         scrollSpeed      : 1000,
         menuSpeed        : 300,
         useSubMenus      : true,

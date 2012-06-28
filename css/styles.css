@@ -48,11 +48,11 @@ a:hover, a:active, a:focus {
 }
 
 .toc-holder li li a:link, .toc-holder li li a:visited {
-	padding-left: 50px;
+	padding-left: 60px;
 }
 
 .toc-holder li li li a:link, .toc-holder li li li a:visited {
-	padding-left: 100px;
+	padding-left: 90px;
 }
 
 .toc-holder li a:hover {
