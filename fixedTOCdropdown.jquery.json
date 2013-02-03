@@ -1,0 +1,36 @@
+{
+    "name": "fixedTOCdropdown",
+    "title": "Fixed Table of Contents Drop-down Menu",
+    "description": "Fixed Table of Contents Drop-down menu jQuery plugin for one-page websites.",
+    "keywords": [
+        "fixed",
+        "dropdown",
+        "drop-down",
+        "toc",
+        "table",
+        "contents",
+        "menu"
+    ],
+    "version": "1.0.0",
+    "author": {
+        "name": "Louis Lazaris",
+        "url": "http://www.impressivewebs.com"
+    },
+    "maintainers": [
+        {
+            "name": "Louis Lazaris",
+            "url": "http://www.impressivewebs.com"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "CC by 3.0",
+            "url": "http://creativecommons.org/licenses/by/3.0/"
+        }
+    ],
+    "homepage": "http://www.impressivewebs.com/fixed-table-of-contents-drop-down-menu-jquery-plugin/",
+    "download": "https://github.com/impressivewebs/fixed-TOC-dropdown-jquery/zipball/master",
+    "dependencies": {
+        "jquery": ">=1.7.2"
+    }
+}
