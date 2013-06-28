@@ -89,7 +89,12 @@
                     $('html, body').animate({
                         scrollTop: $(s.currHash).offset().top - 80
                     }, s.scrollSpeed, function () {
-                        location.hash = s.currHash;
+                        if (history.pushState) {
+                            history.pushState(null, null, s.currHash);
+                        }
+                        else {
+                            location.hash = s.currHash;
+                        }
                     });
 
                     return false;
