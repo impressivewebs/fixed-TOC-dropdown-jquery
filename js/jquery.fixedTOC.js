@@ -80,13 +80,33 @@
 
             },
 
-            doScroll : function () {
+            grabHash : function () {
+
+                if (location.hash) {
+                    s.currHash = location.hash;
+                    base.methods.doScroll(s.currHash);
+                }
+
+            },
+
+            doLocate : function () {
 
                 $(s.tocLinks).on('click', function () {
 
                     s.currHash = $(this)[0].hash;
+                    base.methods.doScroll(s.currHash);
 
-                    $('html, body').animate({
+                    return false;
+
+                });
+
+            },
+
+            doScroll : function (h) {
+
+                s.currHash = h;
+
+                $('html, body').animate({
                         scrollTop: $(s.currHash).offset().top - 80
                     }, s.scrollSpeed, function () {
                         if (history.pushState) {
@@ -96,10 +116,6 @@
                             location.hash = s.currHash;
                         }
                     });
-
-                    return false;
-
-                });
 
             },
 
@@ -149,7 +165,8 @@
         if (s.useSubMenus) {
             base.methods.doOpenItem();
         }
-        base.methods.doScroll();
+        base.methods.grabHash();
+        base.methods.doLocate();
         base.methods.doCloseMenu();
         if (s.topLinkWorks) {
             base.methods.doTopLink();
