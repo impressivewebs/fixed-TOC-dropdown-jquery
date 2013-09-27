@@ -185,7 +185,7 @@
         topLink          : $('#top-link'),
         currHash         : null,
         // customizable settings
-        menuOpens		 : 'click',
+        menuOpens        : 'click',
         scrollSpeed      : 1000,
         menuSpeed        : 300,
         useSubMenus      : true,
