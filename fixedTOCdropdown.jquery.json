@@ -24,8 +24,8 @@
     ],
     "licenses": [
         {
-            "type": "CC by 3.0",
-            "url": "http://creativecommons.org/licenses/by/3.0/"
+            "type": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
         }
     ],
     "homepage": "http://www.impressivewebs.com/fixed-table-of-contents-drop-down-menu-jquery-plugin/",
